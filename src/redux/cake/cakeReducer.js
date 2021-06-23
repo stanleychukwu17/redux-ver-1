@@ -1,5 +1,5 @@
 const initialState = {
-    'numCakes':10
+    'numCakes':30
 }
 
 export function cakeReducer(state = initialState, action) {
