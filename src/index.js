@@ -1,20 +1,17 @@
-import React from 'react';
+import {React} from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-
-import CakeComp from './components/CakeComp.js';
+import App from './App'
 import store from './redux/store';
+
 import {Provider} from 'react-redux'
 
-const App = () => {
+const Jamb = () => {
   return (
     <Provider store={store}>
-      <div className="home">
-        <div>Welcome back to react building </div>
-        <div><CakeComp /></div>
-      </div>
+      <App />
     </Provider>
   );
 }
  
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(<Jamb />, document.getElementById('root'));
