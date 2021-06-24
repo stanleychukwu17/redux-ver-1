@@ -1,7 +1,5 @@
 import {useEffect} from 'react';
 import CakeComp from './components/CakeComp.js';
-import store from './redux/store';
-import {Provider} from 'react-redux'
 import {connect} from 'react-redux'
 
 const App = (props) => {
