@@ -6,9 +6,7 @@ import {Provider} from 'react-redux'
 
 const Jamb = () => {
   return (
-    <Provider store={store}>
-      
-    </Provider>
+    <div></div>
   );
 }
  
