@@ -8,7 +8,7 @@ import {Provider} from 'react-redux'
 
 const Jamb = () => {
   return (
-    <div>
+    <div className="home">
       <App />
     </div>
   );
