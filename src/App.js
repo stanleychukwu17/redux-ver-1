@@ -1,3 +1,4 @@
+import CakeContainer from "./components/CakeComp";
 
 const App = (props) => {
 
