@@ -5,13 +5,13 @@ const CreamContainer = (props) => {
     return (
         <div>
             <div>Creams on shelf - {props.numCreams}</div>
-            <button onClick={()=> {props.buyCream()}}>Buy cake</button>
+            <button onClick={()=> {props.buyCream()}}>Buy icecream</button>
         </div>
     );
 }
 
 let mapStateToProps = (state) => {
-    return {'numCreams':state.numCreams}
+    return {'numCreams':state.cream.numCreams}
 }
 
 let mapDispatchToProps = (dispatch) => {

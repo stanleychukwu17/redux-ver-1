@@ -1,6 +1,8 @@
-import { createStore } from "redux";
-import {cakeReducer} from "./cakeReducer";
+import { createStore, combineReducers } from "redux";
+import {cakeReducer, creamReducer } from "./cakeReducer";
 
-let store = createStore(cakeReducer);
-console.log(store);
+let rootReducer = combineReducers({
+    'cake':cakeReducer, 'cream':creamReducer
+});
+let store = createStore(rootReducer);
 export default store;
