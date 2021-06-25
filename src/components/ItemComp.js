@@ -8,7 +8,7 @@ const ItemComp = () => {
             <div>Enter num of items to buy</div>
             <div>
                 <select><option value="">Buy cake</option><option value="">Buy creaam</option></select>
-                <input type="num" value="{qty}" />
+                <input type="num" value={qty} />
                 <button>Buy now</button>
             </div>
         </div>
