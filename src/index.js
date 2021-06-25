@@ -9,9 +9,11 @@ import store from './redux/store';
 
 const Jamb = () => {
   return (
-    <div className="home">
-      <App />
-    </div>
+    <Provider store={store}>
+      <div className="home">
+        <App />
+      </div>
+    </Provider>
   );
 }
  
