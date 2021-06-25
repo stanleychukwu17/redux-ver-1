@@ -9,7 +9,6 @@ const ItemComp = () => {
     const buy_item = (wch, qty) => {
         if (wch === 'cake') { console.log('for cake') }
         else { console.log('for other')}
-        console.log(wch, qty)
     }
 
     return (
