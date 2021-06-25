@@ -1,13 +1,23 @@
-
+import {connect} from 'react-redux';
+import { buyCream } from '../redux/actions';
 
 const CreamContainer = (props) => {
     return (
         <div>
-            <div>buy icecream - 50</div>
-            {/* <div>Creams on shelf - {props.numCakes}</div> */}
-            {/* <button onClick={()=> {props.buyCake()}}>Buy cake</button> */}
+            <div>Creams on shelf - {props.numCreams}</div>
+            <button onClick={()=> {props.buyCream()}}>Buy cake</button>
         </div>
     );
 }
+
+let mapStateToProps = (state) => {
+    return {'numCreams':state.numCreams}
+}
+
+let mapDispatchToProps = (dispatch) => {
+    return {
+        buyCream : () => dispatch(buyCream())
+    }
+}
  
-export default CreamContainer;
+export default connect(mapStateToProps, mapDispatchToProps)(CreamContainer);

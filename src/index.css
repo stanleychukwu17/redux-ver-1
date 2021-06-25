@@ -9,6 +9,4 @@ div { display: block; position: relative; }
 .home {
   margin: 40px 0 0; font-size:25px;
 }
-.home > div {
-  margin: 10px 0;
-}
+.holder { margin: 15px 0; }

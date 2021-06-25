@@ -1,5 +1,5 @@
 const cur_state = {
-    'numCakes':30, 'numCreams':50
+    'numCakes':30, 'numCreams':60
 };
 
 export let cakeReducer = (state = cur_state, action) => {
