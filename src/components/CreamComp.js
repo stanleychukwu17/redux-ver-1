@@ -15,9 +15,7 @@ let mapStateToProps = (state) => {
 }
 
 let mapDispatchToProps = (dispatch) => {
-    return {
-        buyCream : () => dispatch(buyCream())
-    }
+    return {buyCream : () => dispatch(buyCream())}
 }
  
 export default connect(mapStateToProps, mapDispatchToProps)(CreamContainer);
