@@ -2,13 +2,13 @@ import {useState} from 'react';
 import {connect} from 'react-redux';
 import {buyCake, buyCream} from '../redux/actions'
 
-const ItemComp = () => {
+const ItemComp = (props) => {
     let [qty, setQty] = useState(1);
     let [item, setItem] = useState('cake');
 
     const buy_item = (wch, qty) => {
-        if (wch === 'cake') {  }
-        else { console.log('for other')}
+        if (wch === 'cake') { props.buyCake(qty); }
+        else { props.buyCream(qty); }
     }
 
     return (
