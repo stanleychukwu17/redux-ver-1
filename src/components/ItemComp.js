@@ -18,7 +18,7 @@ const ItemComp = (props) => {
                 <select value={item} onChange={(e) => setItem(e.target.value)}>
                     <option value="cake">Buy cake</option><option value="cream">Buy creaam</option>
                 </select>
-                <input type="num" value={qty} onChange={(e) => setQty(e.target.value)} />
+                <input type="number" value={qty} min="1" onChange={(e) => setQty(e.target.value)} />
                 <button onClick={buy_item.bind(this, item, qty)}>Buy {qty} {item} now</button>
             </div>
         </div>
