@@ -27,7 +27,7 @@ const ItemComp = (props) => {
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        'buyCake':() => dispatch(buyCake()), 'buyCream':() => dispatch(buyCream()),
+        'buyCake':(qty) => dispatch(buyCake(qty)), 'buyCream':(qty) => dispatch(buyCream(qty)),
     }
 }
 
