@@ -1,7 +1,7 @@
-export let buyCake = () => {
-    return {'type': 'BUY_CAKE'};
+export let buyCake = (qty = 1) => {
+    return {'type': 'BUY_CAKE', 'payload':qty};
 }
 
-export let buyCream = () => {
-    return {'type': 'BUY_CREAM'};
+export let buyCream = (qty = 1) => {
+    return {'type': 'BUY_CREAM', 'payload':qty};
 }
