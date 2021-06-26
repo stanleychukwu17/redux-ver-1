@@ -4,6 +4,9 @@ const cream_state = {'numCreams':60}
 export let cakeReducer = (state = cur_state, action) => {
     switch (action.type) {
         case 'BUY_CAKE': return {...state, 'numCakes': state.numCakes - action.payload}
+        case '' : return {...state, ''}
+        case '' : return {...state, ''}
+        case '' : return {...state, ''}
         default: return state
     }
 }
