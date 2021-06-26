@@ -7,7 +7,7 @@ const ItemComp = () => {
     let [item, setItem] = useState('cake');
 
     const buy_item = (wch, qty) => {
-        if (wch === 'cake') { console.log('for cake') }
+        if (wch === 'cake') {  }
         else { console.log('for other')}
     }
 
