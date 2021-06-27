@@ -1,4 +1,7 @@
-# Getting Started with Create React App
+# Getting Started with this app
+
+This project is a mini-task of me playing around with redux
+The next project would be me using redux to create a blog using json server as the database
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
