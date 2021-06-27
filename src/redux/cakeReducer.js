@@ -1,5 +1,5 @@
 const cur_state = {
-    'numCakes':30, 'u_all':{'loading':true, 'users':[], 'error':null}
+    'numCakes':30, 'u_all':{'loading':false, 'users':[], 'error':null}
 };
 const cream_state = {'numCreams':60}
 

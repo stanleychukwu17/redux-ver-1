@@ -1,4 +1,6 @@
 import { useEffect } from "react";
+import { connect } from "react-redux";
+import {fetch_all_users} from "../redux/actions.js"
 
 /*
 ? tell us why the user is still loading 
@@ -7,7 +9,7 @@ import { useEffect } from "react";
 
 const UserComp = (props) => {
     useEffect(() => {
-        console.log('checking 123');
+        props.fetch_all_users();
     });
 
     function Loading () {
@@ -23,5 +25,20 @@ const UserComp = (props) => {
         </div>
     );
 }
- 
-export default UserComp;
+
+//{'loading':true, 'users':[], 'error':null}
+let mapStateToProps = (state) => {
+    return {
+        'loading':state.cake.u_all.loading,
+        'users':state.cake.u_all.loading,
+        'error':state.cake.u_all.error
+    }
+}
+
+let mapDispatchToProps = (dispatch) => {
+    return {
+        'fetch_all_users': () => dispatch(fetch_all_users())
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(UserComp);
