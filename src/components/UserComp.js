@@ -8,10 +8,11 @@ import {fetch_all_users} from "../redux/actions.js"
 */
 
 const UserComp = (props) => {
-    let {loading, users, err_msg} = props;
+    let {loading, users, err_msg, fetch_all_users} = props;
+
     useEffect(() => {
-        props.fetch_all_users();
-    });
+        fetch_all_users();
+    }, []);
 
     function Loading () { return <div>Loading...</div> }
 
@@ -20,7 +21,12 @@ const UserComp = (props) => {
             <div>For users we're going to load</div>
             <div>
                 {
-                    loading ? (<Loading />) : ''
+                    loading ? (<Loading />) : (err_msg)
+                    ? (<div>{err_msg}</div>) : (
+                        users.map((user) => {
+                            return <div>{user.name}</div>
+                        })
+                    )
                 }
             </div>
         </div>

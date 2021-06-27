@@ -1,3 +1,5 @@
+import axios from 'axios';
+
 export let buyCake = (qty = 1) => {
     return {'type': 'BUY_CAKE', 'payload':qty};
 }
@@ -15,6 +17,13 @@ export let fetch_users_error = (err_msg) => ({'type':'FETCH_USERS_ERROR', payloa
 export let fetch_all_users = () => {
 
     return function (dispatch) {
-        console.log('we go fetch them now');
+        dispatch(fetch_users_preloading());
+
+        axios.get('https://jsonplaceholder.typicode.com/users')
+        .then (re => {
+            dispatch(fetch_users_success(re.data));
+        }).catch(err => {
+            dispatch(fetch_users_error(err.message));
+        });
     }
 }
