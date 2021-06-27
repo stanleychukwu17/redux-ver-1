@@ -3,12 +3,6 @@ import CreamContainer from './components/CreamComp';
 import ItemComp from './components/ItemComp';
 import UserComp from './components/UserComp';
 
-let jam = ['a', 'b', 'c'];
-let ghana = ['d', 'e', 'f', 'g'];
-let final = [...jam, ...ghana];
-
-console.log(jam, ghana, final);
-
 
 const App = (props) => {
     return (
