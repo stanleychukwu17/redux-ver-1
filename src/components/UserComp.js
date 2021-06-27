@@ -1,4 +1,4 @@
-
+import { useEffect } from "react";
 
 /*
 ? tell us why the user is still loading 
@@ -6,6 +6,10 @@
 */
 
 const UserComp = (props) => {
+    useEffect(() => {
+        console.log('checking 123');
+    });
+
     function Loading () {
         return <div>Loading...</div>
     }
